@@ -95,44 +95,9 @@ createSDP{
 publishing {
     publications {
         release(MavenPublication) {
-
             artifactId = 'sdp-android'
             groupId = 'com.intuit.sdp'
             version = '1.1.0'
-            artifact("$buildDir/outputs/aar/sdp-android-release.aar")
-
-            pom {
-                name = 'sdp'
-                description = 'A scalable size unit for Andorid'
-                url = 'https://github.com/intuit/sdp'
-                licenses {
-                    license {
-                        name = 'The MIT License (MIT)'
-                        url = 'https://github.com/intuit/sdp/blob/master/LICENSE'
-                    }
-                }
-                developers {
-                    developer {
-                        id = developerID
-                        name = developerName
-                        email = developerEmail
-                    }
-                }
-                scm {
-                    connection = 'scm:git@github.com:intuit/sdp.git'
-                    developerConnection = 'scm:git@github.com:intuit/sdp.git'
-                    url = 'https://github.com/intuit/sdp'
-                }
-            }
-        }
-    }
-    repositories {
-        maven {
-            url sonatypeRepo
-            credentials {
-                username sonatypeUsername
-                password sonatypePassword
-            }
         }
     }
 }
