@@ -95,6 +95,7 @@ createSDP{
 publishing {
     publications {
         release(MavenPublication) {
+            from components.release
             artifactId = 'sdp-android'
             groupId = 'com.intuit.sdp'
             version = '1.1.0'
